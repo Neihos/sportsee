@@ -1,34 +1,15 @@
-import { useEffect, useState } from "react";
-
-const API = import.meta.env.VITE_API_URL;
+import { useUserData } from "./hooks/useUserData";
 
 export default function App() {
-  const [firstName, setFirstName] = useState("");
-  const [error, setError] = useState("");
+  const { data, loading, error } = useUserData(18);
 
-  useEffect(() => {
-    async function fetchUser() {
-      try {
-        const response = await fetch(`${API}/user/18`);
-        if (!response.ok) throw new Error(`Erreur HTTP ${response.status}`);
-
-        const json = await response.json();
-        setFirstName(json?.data?.userInfos?.firstName ?? "");
-      } catch (err) {
-        setError(err.message);
-      }
-    }
-
-    fetchUser();
-  }, []);
-
+  if (loading) return <p>Chargement...</p>;
   if (error) return <p>Erreur : {error}</p>;
-  if (!firstName) return <p>Chargement...</p>;
 
   return (
     <main>
       <h1>
-        Bonjour <span>{firstName}</span>
+        Bonjour <span>{data.userInfos.firstName}</span>
       </h1>
       <p>Félicitations ! Vous avez explosé vos objectifs hier</p>
     </main>
