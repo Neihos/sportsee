@@ -1,14 +1,25 @@
-import logo from '../assets/images/logo.svg'
+import logo from "../assets/images/logo.svg";
+import { Link } from "react-router-dom";
+import "../styles/components/Header.scss";
+
 export default function Header() {
-    return(
-        <header>
-            <img src={logo} alt="logo du site SportSee" />
-            <ul>
-                <li>Accueil</li>
-                <li>Profil</li>
-                <li>Réglage</li>
-                <li>Communauté</li>
-            </ul>
-        </header>
-    )
+  return (
+    <header className="siteHeader">
+      <img src={logo} alt="logo du site SportSee" />
+      <ul className="siteHeader__navBar">
+        <li>
+          <Link to="/">Accueil</Link>
+        </li>
+        <li>
+          <Link to="/">Profil</Link>
+        </li>
+        <li>
+          <Link to="/">Réglage</Link>
+        </li>
+        <li>
+          <Link to="/">Communauté</Link>
+        </li>
+      </ul>
+    </header>
+  );
 }

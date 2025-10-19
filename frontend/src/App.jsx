@@ -1,10 +1,11 @@
-import Header from "./components/header";
+import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 import AppRouter from "./router/appRouter";
+import './styles/pages/layout.scss'
 
 export default function App() {
   return (
-    <div className="layout">
+    <>
       <Header />
       <div className="workspace">
         <SideBar />
@@ -12,6 +13,6 @@ export default function App() {
           <AppRouter />
         </main>
       </div>
-    </div>
+    </>
   );
 }

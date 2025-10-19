@@ -1,0 +1,19 @@
+.sideBar {
+    background-color: black;
+    color: white;
+    width: 117px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 180px;
+    position: relative;
+
+    &__copyright {
+        bottom: 120px;
+        position: absolute;
+        text-wrap: nowrap;
+        transform: rotate(270deg);
+    }
+}
