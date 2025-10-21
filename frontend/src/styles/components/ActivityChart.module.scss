@@ -1,0 +1,62 @@
+.chart-activity {
+  background: #fbfbfb;
+  border-radius: 5px;
+  padding: 20px;
+  min-width: 0;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: #20253a;
+    }
+  }
+}
+
+.legend {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+
+    &--kg {
+      background: #282d30;
+    }
+
+    &--cal {
+      background: #e60000;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: #74798c;
+  }
+}
+
+.customTool {
+  background: #e60000;
+  color: #fff;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
