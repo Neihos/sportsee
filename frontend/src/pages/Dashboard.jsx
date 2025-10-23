@@ -3,6 +3,7 @@ import { useUserData } from "../hooks/useUserData";
 import ActivityChart from "../components/ActivityChart"
 import "../styles/pages/Dashboard.scss"
 import AverageSessionsChart from "../components/AverageSessionsChart"
+import PerformanceChart from "../components/PerformanceChart"
 
 export default function Dashboard() {
   const [userId] = useState(() => Number(localStorage.getItem("uid")) || 12);
@@ -19,6 +20,7 @@ export default function Dashboard() {
       <p className="dashboard__textForUser">Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
       <ActivityChart userId={userId} />
       <AverageSessionsChart userId={userId} />
+      <PerformanceChart userId={userId} />
     </>
   );
 }

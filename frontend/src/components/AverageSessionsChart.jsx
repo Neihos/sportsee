@@ -47,7 +47,7 @@ export default function AverageSessionsChart({ userId }) {
     <div className={styles["card"]}>
       <p className={styles["title"]}>Durée moyenne des sessions</p>
 
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height={263}>
         <LineChart
           data={sessions}
           margin={{ top: 0, right: 0, left: 0, bottom: 16 }}
