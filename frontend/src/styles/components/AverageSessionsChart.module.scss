@@ -1,6 +1,6 @@
 .card {
-  aspect-ratio: 258/263;
-  width: 258px;
+  width: clamp(11.469rem, 0.007rem + 17.909vw, 16.125rem);
+  height: clamp(11.688rem, -0.005rem + 18.269vw, 16.438rem);
   background: #ff0101;
   border-radius: 5px;
   color: #fff;
@@ -10,10 +10,10 @@
 
 .title {
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: clamp(0.938rem, -1.37rem + 3.606vw, 1.875rem);
+  left: clamp(0.938rem, -1.37rem + 3.606vw, 1.875rem);
   opacity: 0.6;
-  font-size: 15px;
+  font-size: clamp(0.75rem, 0.288rem + 0.721vw, 0.938rem);
   font-weight: 500;
   max-width: 147px;
 }

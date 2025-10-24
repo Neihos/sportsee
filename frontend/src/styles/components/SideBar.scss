@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     gap: 25px;
+    padding: 10px;
     padding-bottom: 180px;
     position: relative;
 
@@ -15,5 +16,9 @@
         position: absolute;
         text-wrap: nowrap;
         transform: rotate(270deg);
+    }
+
+    img {
+        width: clamp(2.813rem, -0.111rem + 4.567vw, 4rem);
     }
 }

@@ -1,7 +1,8 @@
 .chart {
   background: #282d30;
   border-radius: 5px;
-  width: 258px;
-  height: 263px;
-  min-height: 250px;
+  width: clamp(11.469rem, 0.007rem + 17.909vw, 16.125rem);
+}
+.chart :global(.recharts-polar-angle-axis text) {
+  font-size: clamp(0.625rem, 0.317rem + 0.481vw, 0.75rem);
 }

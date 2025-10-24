@@ -45,15 +45,14 @@ export default function PerformanceChart({ userId }) {
 
   return (
     <div className={styles["chart"]}>
-      <ResponsiveContainer width="100%" height={263}>
+      <ResponsiveContainer width="100%" aspect={0.981752}>
         <RadarChart data={orderedData} outerRadius="65%">
           <PolarGrid radialLines={false} stroke="#fff" />
           <PolarAngleAxis
             dataKey="kind"
-            stroke="#fff"
+            tick={{ fill: "#fff" }}
             tickLine={false}
             axisLine={false}
-            fontSize={12}
           />
           <Radar
             dataKey="value"

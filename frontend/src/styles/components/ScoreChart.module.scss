@@ -1,0 +1,53 @@
+.card {
+  position: relative;
+  background: #fbfbfb;
+  border-radius: 5px;
+  width: clamp(11.469rem, 0.007rem + 17.909vw, 16.125rem);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.title {
+  position: absolute;
+  top: clamp(0.625rem, -2.452rem + 4.808vw, 1.875rem);
+  left: clamp(16px, 2vw, 30px);
+  color: #20253a;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 500;
+  z-index: 2;
+}
+
+.chartBody {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 258 / 263; 
+}
+
+.ringBg  { fill: #fbfbfb; }
+.ringFg  { fill: #ff0101; }
+.ringRest{ fill: transparent; }
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+  text-align: center;
+}
+
+.value {
+  color: #282d30;
+  font-weight: 700;
+  font-size: clamp(20px, 2.2vw, 26px);
+  margin-bottom: 4px;
+}
+.sub {
+  color: #74798c;
+  font-size: clamp(12px, 1.6vw, 16px);
+  font-weight: 500;
+  line-height: 1.4;
+}
