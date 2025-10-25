@@ -1,10 +1,18 @@
 .dashboard {
   &__title {
+    font-size: clamp(2.125rem, -0.029rem + 3.365vw, 3rem);
     margin-bottom: clamp(0.625rem, -0.913rem + 2.404vw, 1.25rem);
+
+    span {
+      color: red;
+    }
   }
+
   &__textForUser {
     margin-bottom: clamp(1.25rem, -3.365rem + 7.212vw, 3.125rem);
+    font-size: clamp(0.813rem, 0.043rem + 1.202vw, 1.125rem);
   }
+
   &__chartsContainer {
     display: flex;
     column-gap: 33px;
@@ -15,6 +23,7 @@
     flex-direction: column;
     gap: 33px;
     min-width: 0;
+
     &__bottom {
       display: flex;
       gap: clamp(1.438rem, -0.101rem + 2.404vw, 2.063rem);
@@ -22,10 +31,8 @@
   }
 
   &__chartsContainer__right {
-    .blocErase {
-      width: clamp(11.469rem, 0.007rem + 17.909vw, 16.125rem); // 183.5 à 1024 vers 258 à 1440
-      height: clamp(5.5rem, -0.038rem + 8.654vw, 7.75rem); // 88 à 1024 vers 124 à 1440
-      background-color: black;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

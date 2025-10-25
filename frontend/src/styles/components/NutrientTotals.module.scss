@@ -1,0 +1,38 @@
+.bloc {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: clamp(1.438rem, 0.053rem + 2.163vw, 2rem); // 23 à 1024 vers 32 à 1440
+  gap: clamp(1.438rem, 0.053rem + 2.163vw, 2rem); // 23 à 1024 vers 32 à 1440
+  width: clamp(
+    11.469rem,
+    0.007rem + 17.909vw,
+    16.125rem
+  ); // 183.5 à 1024 vers 258 à 1440
+  height: clamp(
+    5.5rem,
+    -0.038rem + 8.654vw,
+    7.75rem
+  ); // 88 à 1024 vers 124 à 1440
+  background-color: #fbfbfb;
+
+  img {
+    width: clamp(2.688rem, 0.072rem + 4.087vw, 3.75rem); // 43 à 1024 vers 60 à 1440
+  }
+
+  &__nutrientTotals {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__result {
+      font-size: clamp(0.875rem, -0.048rem + 1.442vw, 1.25rem); // 14 à 1024 vers 20 à 1440
+      font-weight: 700;
+    }
+
+    &__name {
+      font-size: clamp(0.625rem, 0.01rem + 0.962vw, 0.875rem); // 10 à 1024 vers 14 à 1440
+      color: #74798c;
+    }
+  }
+}

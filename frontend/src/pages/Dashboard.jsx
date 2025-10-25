@@ -5,6 +5,11 @@ import "../styles/pages/Dashboard.scss";
 import AverageSessionsChart from "../components/AverageSessionsChart";
 import PerformanceChart from "../components/PerformanceChart";
 import ScoreChart from "../components/ScoreChart";
+import NutrientTotals from "../components/NutrientTotals";
+import caloriesIcon from "../assets/images/calories-icon.svg";
+import proteinesIcon from "../assets/images/proteines-icon.svg"
+import glucidesIcon from "../assets/images/glucides-icon.svg"
+import lipidesIcon from "../assets/images/lipides-icon.svg"
 
 export default function Dashboard() {
   const [userId] = useState(() => Number(localStorage.getItem("uid")) || 12);
@@ -32,7 +37,29 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="dashboard__chartsContainer__right">
-          <div className="blocErase"></div>
+          <NutrientTotals
+            icone={caloriesIcon}
+            result={`${user.keyData.calorieCount.toLocaleString("en-US")}kCal`}
+            nutrientName="Calories"
+          />
+
+          <NutrientTotals
+            icone={proteinesIcon}
+            result={`${user.keyData.proteinCount}g`}
+            nutrientName="Protéines"
+          />
+
+          <NutrientTotals
+            icone={glucidesIcon}
+            result={`${user.keyData.carbohydrateCount}g`}
+            nutrientName="Glucides"
+          />
+
+          <NutrientTotals
+            icone={lipidesIcon}
+            result={`${user.keyData.lipidCount}g`}
+            nutrientName="Lipides"
+          />
         </div>
       </div>
     </>

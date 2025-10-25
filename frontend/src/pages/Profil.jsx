@@ -12,16 +12,10 @@ export default function Profil() {
   return (
     <>
       <span>Profil :</span>
-      <button
-        onClick={() => setUserId(12)}
-        aria-pressed={userId === 12}
-      >
+      <button onClick={() => setUserId(12)} aria-pressed={userId === 12}>
         Karl
       </button>
-      <button
-        onClick={() => setUserId(18)}
-        aria-pressed={userId === 18}
-      >
+      <button onClick={() => setUserId(18)} aria-pressed={userId === 18}>
         Cecilia
       </button>
     </>

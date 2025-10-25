@@ -53,7 +53,7 @@ export default function ActivityChart({ userId }) {
         </div>
       </div>
 
-      <ResponsiveContainer width="100%" aspect={2.609375} >
+      <ResponsiveContainer width="100%" aspect={2.609375}>
         <BarChart
           data={sessions}
           barGap={8}

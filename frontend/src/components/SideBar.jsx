@@ -1,8 +1,8 @@
 import "../styles/components/SideBar.scss";
-import zenIcon from '../assets/images/zenicon.svg'
-import swimIcon from '../assets/images/swimIcon.svg'
-import bikeIcon from '../assets/images/bikeIcon.svg'
-import strongIcon from '../assets/images/strongIcon.svg'
+import zenIcon from "../assets/images/zenicon.svg";
+import swimIcon from "../assets/images/swimIcon.svg";
+import bikeIcon from "../assets/images/bikeIcon.svg";
+import strongIcon from "../assets/images/strongIcon.svg";
 
 export default function SideBar() {
   return (
