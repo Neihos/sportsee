@@ -4,7 +4,7 @@ import {
   getUserActivity,
   getUserAverageSessions,
   getUserPerformance,
-} from "../services/api";
+} from "../services/dataClient";
 
 export function useUserData(userId) {
   const [data, setData] = useState(null);
