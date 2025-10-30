@@ -1,5 +1,5 @@
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { useUserData } from "../hooks/useUserData";
+import { useUserData } from "../data/hooks/useUserData";
 import styles from "../styles/components/ScoreChart.module.scss";
 
 export default function ScoreChart({ userId }) {
@@ -7,8 +7,7 @@ export default function ScoreChart({ userId }) {
   if (loading) return <div className={styles["card"]}>Chargement…</div>;
   if (error) return <div className={styles["card"]}>Erreur : {error}</div>;
 
-  // L'API peut renvoyer todayScore ou score (0..1)
-  const ratio = (data.todayScore ?? data.score) || 0;
+  const ratio = data.score || 0;
   const percent = Math.round(ratio * 100);
 
   const fg = [

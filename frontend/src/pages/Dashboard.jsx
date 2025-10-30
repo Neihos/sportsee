@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useUserData } from "../hooks/useUserData";
+import { useUserData } from "../data/hooks/useUserData";
 import ActivityChart from "../components/ActivityChart";
 import "../styles/pages/Dashboard.scss";
 import AverageSessionsChart from "../components/AverageSessionsChart";
@@ -7,9 +7,9 @@ import PerformanceChart from "../components/PerformanceChart";
 import ScoreChart from "../components/ScoreChart";
 import NutrientTotals from "../components/NutrientTotals";
 import caloriesIcon from "../assets/images/calories-icon.svg";
-import proteinesIcon from "../assets/images/proteines-icon.svg"
-import glucidesIcon from "../assets/images/glucides-icon.svg"
-import lipidesIcon from "../assets/images/lipides-icon.svg"
+import proteinesIcon from "../assets/images/proteines-icon.svg";
+import glucidesIcon from "../assets/images/glucides-icon.svg";
+import lipidesIcon from "../assets/images/lipides-icon.svg";
 
 export default function Dashboard() {
   const [userId] = useState(() => Number(localStorage.getItem("uid")) || 12);

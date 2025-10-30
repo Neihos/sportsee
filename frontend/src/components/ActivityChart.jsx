@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
-import { useActivity } from "../hooks/useUserData";
+import { useActivity } from "../data/hooks/useUserData";
 import styles from "../styles/components/ActivityChart.module.scss";
 
 function CustomTool({ active, payload }) {

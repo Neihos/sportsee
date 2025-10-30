@@ -6,7 +6,7 @@ import {
   YAxis,
   Tooltip,
 } from "recharts";
-import { useAverageSessions } from "../hooks/useUserData";
+import { useAverageSessions } from "../data/hooks/useUserData";
 import styles from "../styles/components/AverageSessionsChart.module.scss";
 
 const DAY_LABEL = ["", "L", "M", "M", "J", "V", "S", "D"]; // 1..7

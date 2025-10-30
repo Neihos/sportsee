@@ -5,7 +5,7 @@ import {
   PolarAngleAxis,
   Radar,
 } from "recharts";
-import { usePerformance } from "../hooks/useUserData";
+import { usePerformance } from "../data/hooks/useUserData";
 import styles from "../styles/components/PerformanceChart.module.scss";
 
 export default function PerformanceChart({ userId }) {
