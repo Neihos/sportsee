@@ -49,10 +49,19 @@ export class UserPerformanceNormalized {
     const { userId = null, kind = {}, data = [] } = api;
 
     this.userId = userId;
-    this.kind = kind;
+
+    const kindMap = kind ?? {
+      1: "Cardio",
+      2: "Energie",
+      3: "Endurance",
+      4: "Force",
+      5: "Vitesse",
+      6: "Intensité",
+    };
+
     this.data = data.map((item) => ({
       value: item.value ?? 0,
-      kind: item.kind ?? null,
+      kind: kindMap[item.kind] ?? item.kind ?? null,
     }));
   }
 }
